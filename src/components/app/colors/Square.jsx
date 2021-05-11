@@ -2,22 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 
-export default function Square({ sqColor, bgImage }) {
+const Square = ({ colorsArr, bgImage, bgText }) => {
   return (
     <div style={{
       height: '300px',
       width: '300px',
-      backgroundColor: sqColor,
+      backgroundColor: colorsArr,
       backgroundImage: bgImage,
       border: '5px solid black'
     }}>
-
       test
     </div>
   )
 }
 
 Square.propTypes = {
-  sqColor: PropTypes.string.isRequired,
-  bgImage: PropTypes.string.isRequired
+  colorArr: PropTypes.string.isRequired,
+  bgImage: PropTypes.string.isRequired,
+  bgText: PropTypes.string.isRequired
 }
+
+
+export default Square;
