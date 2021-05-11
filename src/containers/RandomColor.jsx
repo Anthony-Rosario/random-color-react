@@ -16,12 +16,14 @@ export default class RandomColor extends Component {
     setInterval(() => {
       const { colorsArr, bgColor, textArr, bgText } = this.state;
       const bgNewColor = this.randomColor(colorsArr);
-      const bgNewText = this.randomText(textArr);
-      if(bgNewColor === bgColor && bgNewText === bgText){
+      const bgNewText = this.randomText(textArr); 
+      console.log(bgNewText);
+      console.log(bgNewColor);
+      if(bgNewColor === bgColor){
         this.setState({
           bgColor: '',
           bgImage: 'url(https://www.fillmurray.com/300/300)',
-          bgText: ''
+          bgText: 'test  '
         });
       } else this.setState({ bgColor: bgNewColor, bgImage: '', bgText: bgNewText })
     }, 700);
@@ -37,11 +39,12 @@ export default class RandomColor extends Component {
 
 
   render() {
-    const { bgColor, bgImage } = this.state;
+    const { bgColor, bgImage, bgText } = this.state;
     return (
         <Square 
         colorsArr={bgColor}
         bgImage={bgImage}
+        textArr={bgText}
         />
     )
   }

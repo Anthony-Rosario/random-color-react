@@ -11,7 +11,7 @@ const Square = ({ colorsArr, bgImage, bgText }) => {
       backgroundImage: bgImage,
       border: '5px solid black'
     }}>
-      test
+      {bgText}
     </div>
   )
 }
@@ -19,7 +19,7 @@ const Square = ({ colorsArr, bgImage, bgText }) => {
 Square.propTypes = {
   colorArr: PropTypes.string.isRequired,
   bgImage: PropTypes.string.isRequired,
-  bgText: PropTypes.string.isRequired
+  bgText: PropTypes.array.isRequired
 }
 
 
